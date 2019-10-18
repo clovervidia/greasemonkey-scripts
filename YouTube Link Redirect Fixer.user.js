@@ -46,6 +46,11 @@
                 link.href = pURL;
                 link.innerText = pURL;
             };
+
+            // Some YouTube URLs may also have truncated URLs. This fixes that
+            if (link.innerText.includes("...") && !link.innerText.includes(" ")){
+                link.innerText = link.href;
+            };
         };
     };
 })();
