@@ -38,6 +38,7 @@
                 link.href = pURL;
                 link.innerText = pURL;
             };
+
             // Other times it will appear later in the URL
             if (link.href.includes("&q")) {
                 urlParams = new URLSearchParams(link.href);
